@@ -33,11 +33,12 @@ int main()
         input2.erase(0, pos + delimiter.length());
     }
     input2Tokens.push_back(stoi(input2));
-    std::sort(input1Tokens.begin(), input1Tokens.end());
-    std::sort(input2Tokens.begin(), input2Tokens.end());
+
+    sort(input1Tokens.begin(), input1Tokens.end());
+    sort(input2Tokens.begin(), input2Tokens.end());
     vector<int> res;
     set_intersection(input1Tokens.begin(), input1Tokens.end(), input2Tokens.begin(), input2Tokens.end(), back_inserter(res));
-    for (const int &i : res)
+    for (int i : res)
     {
         cout << i << endl;
     }

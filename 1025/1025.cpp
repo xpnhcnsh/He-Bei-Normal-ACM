@@ -12,5 +12,5 @@ int main()
         factorial = factorial * i;
         sum = sum + factorial;
     }
-    printf("%lld", sum);
+    printf("sum is: %lld", sum);
 }
