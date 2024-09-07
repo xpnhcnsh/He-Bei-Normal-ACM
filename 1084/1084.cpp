@@ -15,7 +15,7 @@ int main()
 	}
 	int residualV = v - (1 + n - 1) * (n - 1) / 2 * d;
 	// int residualSec = ceil(residualV / d);
-	// if ceil() meets a compile error, use ceil(x/y) = ((x-1)/y)+1 instead.
+	// if ceil() meets a compile error, use ceil(x/y) = (x-1)/y+1 instead.
 	int residualSec = residualV == 0 ? 0 : ((residualV - 1) / d) + 1;
 	cout << ((1 + n - 1) * (n - 1) / 2) + n - 1 + residualSec;
 }
